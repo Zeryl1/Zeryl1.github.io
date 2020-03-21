@@ -1,1 +1,384 @@
-Hello World
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta property="og:image" content="Git_logo.png" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:description" content="Сайт-визитка, для показа гуманоидам" />
+    <meta property="og:site_name" content="Zeryl Pages Exp." />
+    <meta property="vk:image" content="Git_logo.png" />
+    <meta property="vk:locale" content="ru_RU" />
+    <meta property="vk:description" content="Сайт-визитка, для показа гуманоидам" />
+    <meta property="vk:site_name" content="Zeryl Pages Exp." />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+    <title>Zeryl Pages Exp.</title>
+</head>
+
+<body>
+    <p><img src='Logo.png'></p>
+    <h1>FAQ</h1>
+    <p>Наследуется мало свойств, в основном - свойства шрифта.</p>
+    <p>Существуют относительные и абсолютные значения свойств:<br>
+        Font-size у родительского класса 20px<br>
+        Font-size у класса 50% - это 50% от 20px - 10px</p>
+    <h3>Селекторы</h3>
+    <p>Существуют селекторы по классу:</p>
+    <table>
+        <caption>Пример использования</caption>
+        <tr>
+            <th>HTML</th>
+            <th>CSS</th>
+            <th>Комментарий</th>
+        </tr>
+        <tr>
+            <td> <code>
+                    &lt;p class=&quot;warning&quot;&gt; <br>
+                    &lt;/p&gt;
+                </code>
+            </td>
+            <td> <code> .warning {
+                    background:red
+                    }</code>
+            </td>
+            <td></td>
+        </tr>
+        <tr class="hover">
+            <td> <code>
+                    &lt;p class=&quot;warning border-gold&quot;&gt; <br>
+                    &lt;/p&gt;
+                </code>
+            </td>
+            <td> <code> .border-gold {
+                    border:1px solid yellow
+                    }</code>
+            </td>
+            <td>Можно задавать несколько классов и использовать один класс из нескольких</td>
+        </tr>
+        <tr>
+            <td> <code>
+                    &lt;p class=&quot;warning quot;&gt;
+                    &lt;li&gt;test&lt;/li&gt; <br>
+                    &lt;/p&gt;
+                </code>
+            </td>
+            <td> <code> .warning li {
+                    color: green
+                    }</code>
+            </td>
+            <td>Можно применять стили к атрибутам внутри класса</td>
+        </tr>
+    </table>
+    <p>Так же, существуют селекторы по ID, обозначаются в css: #idselektor</p>
+    <p>Можно указать в css <code>.class1 .class2</code>, и тогда правило применится к элементам с классом "class2", предком которого является элемент с классом "class1"</p>
+    <p>Если необходимо, можно выбрать элемент, у которого присутствуют сразу несколько классов, указав их без пробела. Например: <code>.class1.white</code></p>
+    <p><b>Дочерний селектор</b> <code>.class1 > li</code> используется только для детей-элементов, не используясь в дальнейших потомках.</p>
+    <p>Существует большое количество селекторов с родительскими связями.</p>
+    <p>Существуют селекторы по атрибуту:</p>
+
+    <table>
+        <tr>
+            <th>HTML</th>
+            <th>CSS</th>
+        </tr>
+        <tr>
+            <td> <code>
+                    &lt;div&gt;<br>
+                    &lt;p atribut=&quot;res&quot;&gt;Результат1&lt;/p&gt;<br>
+                    &lt;/div&gt;
+
+                </code>
+            </td>
+            <td> <code> p[atribut="res"] {<br>
+                    background: gray;}
+                </code>
+            </td>
+
+        </tr>
+        <tr>
+            <td> <code>
+                    &lt;div&gt;<br>
+                    &lt;p atribut=&quot;res&quot;&gt;Результат1&lt;/p&gt;<br>
+                    &lt;p atribut=&quot;res2&quot;&gt;Результат1&lt;/p&gt;<br>
+                    &lt;/div&gt;
+
+                </code>
+            </td>
+            <td> <code> p[atribut] {<br>
+                    background: red;}
+                </code>
+            </td>
+
+        </tr>
+    </table>
+    <!--    htmlbook.ru/css/selector Список селекторов -->
+
+    <h3>Ссылки</h3>
+    <p>При добавлении ссылок, можно указать атрибут "a href = "..." <b>target</b> со значениями: <br>
+        <b>_blank</b>
+        Загружает страницу в новое окно браузера.<br>
+        <b> _self</b>
+        Загружает страницу в текущее окно.<br>
+        <b> _parent</b>
+        Загружает страницу во фрейм-родитель, если фреймов нет, то это значение работает как _self.<br>
+        <b> _top</b>
+        Отменяет все фреймы и загружает страницу в полном окне браузера, если фреймов нет, то это значение работает как _self.</p>
+    <div>
+        <h3>Блочные элементы</h3>
+        <h4>&lt;p&gt;, &lt;div&gt;, &lt;h2&gt;, &lt;ul&gt;, и др.</h4>
+        Они занимают все доступное место по горизонтали.
+        <br>Каждый новый блочный элемент начинается с новой строки.
+        <br>Блочным элементам можно задавать любые размеры: высота, ширина, внутренние и внешние отступы.
+        <p>Если блок меньше содержимого, есть свойство <b>overflow</b>:(hidden|visible)</p>
+    </div>
+    <div>
+        <h3>Строчные элементы</h3>
+        <h4>
+        </h4>
+        <p> Строчным элементам нельзя задать ширину или высоту. Их размер зависит от содержимого.
+            <br>
+            Так же нельзя задвать вертикальные внешние отступы</p>
+        <p>Строчным элементам можно задавать внутренние отступы, а так же внешние горизонтальные</p>
+        <p>Если разместить несколько строчных элементов, то они будут с расстоянием между друг другом. Это происходит потому, что браузер распознает элементы "как отдельные слова".</p>
+        <span>Текст 1</span>
+        <span>Текст 2</span>
+        <span>Текст 3</span>
+        <p> Чтобы этого избежать, нужно задать размер шрифта отдельным строчным элементам, затем все отдельные элементы поместить внутрь одного блокого, размер шрифта которого будет равен 0</p>
+        <div class="stroka">
+            <span>Текст 1</span>
+            <span>Текст 2</span>
+            <span>Текст 3</span>
+        </div>
+        <br>
+        <table>
+            <tr>
+                <th>HTML</th>
+                <th>CSS</th>
+            </tr>
+            <tr>
+                <td> <code>
+                        &lt;div class=&quot;stroka&quot;&gt;<br>   &lt;span&gt;Текст 1&lt;/span&gt;<br>
+                          &lt;span&gt;Текст 2&lt;/span&gt;<br>
+                          &lt;span&gt;Текст 3&lt;/span&gt;<br>
+                        &lt;/div&gt;
+                    </code>
+                </td>
+                <td> <code> span {
+                        border: 1px solid black;
+                        font-size: 14px;
+                        }
+
+                        .stroka {
+                        font-size: 0
+                        }</code>
+                </td>
+
+            </tr>
+        </table>
+        <p>Можно принудительно сделать строчный элемент блочным, добавив в CSS display:block</p>
+        <p> Можно создавать блочно-строчные элементы.<br>
+            display:inline-block<br>
+            Теперь можно задавать размеры и отступы.</p>
+        <p>Блочно-строчные элементы отличаются от других тем, что они похожи на блочные, но распологаются в одну строку</p>
+    </div>
+    <div>
+        <h3>Float</h3>
+        <p>CSS свойство float указывает, что текущий элемент должен быть изъят из обычного flow (потока) и прижат к левой или правой стороне родительского элемента. Текст и inline элементы будут обтекать такой элемент.</p>
+        Для того чтобы избежать вываливания из родительского элемента, нужно указать на родительском элементе класс clearfix, с кодом:<br>
+        <code>
+            .clearfix::after {<br>
+            clear:both;<br>
+            display:table;<br>
+            content: "";<br>
+            }
+        </code>
+    </div>
+    <div>
+        <h3>FlexBox</h3>
+        <p>Это CSS механизм, который позволяет контролировать размер, порядок и выравнивание по нескольким осям.(слева-направо, сверху-вниз)</p>
+        <p>Чтобы создать flexbox, необходимо задать родительскому контейнеру свойство display:flex</p>
+        <table>
+            <tr>
+                <th>HTML</th>
+                <th>CSS</th>
+            </tr>
+            <tr>
+                <td> <code>
+                        &lt;section&gt; <br>
+                        &lt;div class="flex"&gt;1&lt;/div&gt;<br>
+                        &lt;div class="flex"&gt;2&lt;/div&gt;<br>
+                        &lt;div class="flex"&gt;3&lt;/div&gt;<br>
+                        &lt;div class="flex"&gt;4&lt;/div&gt;<br>
+                        &lt;div class="flex"&gt;5&lt;/div&gt;<br>
+                        &lt;/section&gt;
+
+                    </code>
+                </td>
+                <td> <code> .flex {<br>
+                        width: 40px;<br>
+                        height: 40px;<br>
+                        background: lime;<br>
+                        border: 1px solid;<br>
+                        }<br>
+                        section {<br>
+                        display: flex;<br>
+                        }</code>
+                </td>
+
+            </tr>
+        </table>
+        <br>
+        <section>
+            <div class="flex">1</div>
+            <div class="flex">2</div>
+            <div class="flex">3</div>
+            <div class="flex">4</div>
+            <div class="flex">5</div>
+        </section>
+        <p>Изменить направление главной оси Flexbox`ов с помощью правила <b>flex-direction</b>: (row|row-reverse|column|column-reverse)</p>
+        <p>Для того, чтобы изменить расположение Flexbox`ов вдоль главной оси, есть правило <b>justify-content</b>: (space-between <i>[без отступов с краев]</i>|space-around <i>[с отступом от края, равным половине расстояния между блоками]</i>|center|flex-start|flex-end</p>
+        <div>
+            <table>
+                <tr>
+                    <th>HTML</th>
+                    <th>CSS</th>
+                </tr>
+                <tr>
+                    <td> <code>
+                            &lt;section&gt; <br>
+                            &lt;div class="flex"&gt;1&lt;/div&gt;<br>
+                            &lt;div class="flex"&gt;2&lt;/div&gt;<br>
+                            &lt;div class="flex"&gt;3&lt;/div&gt;<br>
+                            &lt;div class="flex"&gt;4&lt;/div&gt;<br>
+                            &lt;div class="flex"&gt;5&lt;/div&gt;<br>
+                            &lt;/section&gt;
+
+                        </code>
+                    </td>
+                    <td> <code> .flex {<br>
+                            width: 40px;<br>
+                            height: 40px;<br>
+                            background: lime;<br>
+                            border: 1px solid;<br>
+                            }<br>
+                            section {<br>
+                            display: flex;<br>
+                            justify-content: space-around <br>
+                            flex-direction: row-reverse; <br>
+                            }</code>
+                    </td>
+
+                </tr>
+            </table>
+            <br>
+            <section class="section_2">
+                <div class="flex">1</div>
+                <div class="flex">2</div>
+                <div class="flex">3</div>
+                <div class="flex">4</div>
+                <div class="flex">5</div>
+            </section>
+        </div>
+        <p>Для выравнивания по перпендикулярной оси есть правило align-items:(center|flex-end|flex-start|stretch<i>[при использовании все элементы растягиваются вдоль перпендикулярной оси])</i></p>
+        <div>
+            <table>
+                <tr>
+                    <th>HTML</th>
+                    <th>CSS</th>
+                </tr>
+                <tr>
+                    <td> <code>
+                            &lt;section&gt; <br>
+                            &lt;div class="flex"&gt;1&lt;/div&gt;<br>
+                            &lt;div class="flex"&gt;2&lt;/div&gt;<br>
+                            &lt;div class="flex"&gt;3&lt;/div&gt;<br>
+                            &lt;div class="flex"&gt;4&lt;/div&gt;<br>
+                            &lt;div class="flex"&gt;5&lt;/div&gt;<br>
+                            &lt;/section&gt;
+
+                        </code>
+                    </td>
+                    <td> <code> .flex {<br>
+                            width: 40px;<br>
+                            background: lime;<br>
+                            border: 1px solid;<br>
+                            }<br>
+                            section {<br>
+                            display: flex;<br>
+                            justify-content: space-around <br>
+                            align-items:center; <br>
+                            }</code>
+                    </td>
+
+                </tr>
+            </table>
+            <br>
+            <section class="section_3">
+                <div class="flex">1</div>
+                <div class="flex">2</div>
+                <div class="flex">3</div>
+                <div class="flex">4</div>
+                <div class="flex">5</div>
+            </section>
+        </div>
+        <p>Если ширина родительского элемента будет меньше суммарной ширины вложенных, то можно перенести элементы с помщью правила <b>flex-wrap:wrap</b></p>
+        <p>Для того чтобы упралять расположением рядов вдоль поперечной оси существует свойство <b>align-content</b>:(flex-start|space-between|space-around)</p>
+        <div>
+            <table>
+                <tr>
+                    <th>HTML</th>
+                    <th>CSS</th>
+                </tr>
+                <tr>
+                    <td> <code>
+                            &lt;section&gt; <br>
+                            &lt;div class="flex"&gt;1&lt;/div&gt;<br>
+                            &lt;div class="flex"&gt;2&lt;/div&gt;<br>
+                            &lt;div class="flex"&gt;3&lt;/div&gt;<br>
+                            &lt;div class="flex"&gt;4&lt;/div&gt;<br>
+                            &lt;div class="flex"&gt;5&lt;/div&gt;<br>
+                            &lt;/section&gt;
+
+                        </code>
+                    </td>
+                    <td> <code> .flex {<br>
+                            width: 40px;<br>
+                            background: lime;<br>
+                            border: 1px solid;<br>
+                            }<br>
+                            section {<br>
+                            display: flex;<br>
+                            border: 1px solid;<br>
+                            height: 300px;<br>
+                            width: 150px;<br>
+                            flex-wrap:wrap;<br>
+                            align-content: space-around;
+                            <br>
+                            }</code>
+                    </td>
+
+                </tr>
+            </table>
+            <br>
+            <section class="section_4">
+                <div class="flex">1</div>
+                <div class="flex">2</div>
+                <div class="flex">3</div>
+                <div class="flex">4</div>
+                <div class="flex">5</div>
+            </section>
+        </div>
+        <p>align-content всегда важнее, чем align-item, поэтому можно использовать align-content (спецификация новых версий браузера, в старых версиях может конфликтовать)</p>
+        <p>Если Flex-элементу задать margin(отступ):auto то все элементы после данного будут выравнены справа. Даже при использовании <b>justify-content: center</b></p>
+        <p>Флекс-элементы могут растягиваться с помощью flex-grow: 1[до тех пор, пока не закончится свободное пространство]|2,3...(и другие <b>доли</b>)<br>
+            За сжатие отвечает параметр flex-shrink:0[запрет на сжатие]|2,3...(и другие <b>доли</b>)</p>
+        <p>Можно задать базовый размер (в зависимости от основной оси) flex-basis:100px</p>
+        <p>flex-grow: 1;<br>
+            flex-shrink: 0;<br>
+            flex-basis: 100px;<br><br>
+            Можно сократить до:<br>
+            flex: 1 0 100px;</p>
+    </div>
+    <!--    flexboxfroggy.com - сайт для изучения флексбоксов в виде игры-->
+</body></html>

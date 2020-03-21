@@ -1,0 +1,70 @@
+table {
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+th {
+    background: #b9c9fe;
+    color: #00000;
+    padding: 8px;
+    border: 1px solid grey;
+}
+
+td {
+    background: #e8edff;
+    border-bottom: 1px solid #fff;
+    color: #000;
+    padding: 8px;
+    border: 1px solid grey;
+}
+
+.hover td {
+    background: #ccddff;
+}
+
+caption {
+    border-top: 1px solid grey;
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+}
+
+span {
+    border: 1px solid black;
+    font-size: 14px;
+}
+
+.stroka {
+    font-size: 0
+}
+
+.flex {
+    width: 40px;
+    height: 40px;
+    background: #b9c9fe;
+    border: 1px solid;
+}
+
+section {
+    display: flex;
+}
+
+.section_2 {
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+
+.section_3 {
+    justify-content: space-around;
+    align-items:center;
+    border: 1px solid;
+    height: 100px;
+}
+
+.section_4 {
+border: 1px solid;
+    height: 300px;
+    width: 150px;
+    flex-wrap:wrap;
+    align-content: space-around;
+
+}
