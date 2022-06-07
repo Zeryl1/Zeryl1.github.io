@@ -28,7 +28,7 @@ a:focus, a:hover { text-decoration: none; color: #8e7424; }
    .top-text { text-align: right; }
    .top-text .text-block { padding-left: 20px; color: #fff; line-height: 18px; }
 
-   .hero-section { padding-top: 135px; padding-bottom: 135px; background: linear-gradient(rgba(36, 39, 38, 0.5), rgba(36, 39, 38, 0.5)), rgba(36, 39, 38, 0.5) url(../img/background.jpg) no-repeat center; background-size: cover; }
+   .hero-section { padding-top: 135px; padding-bottom: 135px; background: linear-gradient(rgba(36, 39, 38, 0.5), rgba(36, 39, 38, 0.5)), rgba(36, 39, 38, 0.5) url(./background.jpg) no-repeat center; background-size: cover; }
    .hero-title { font-size: 46px; color: #fff; line-height: 58px; font-weight: 600; margin-bottom: 30px; letter-spacing: -1px; }
    .hero-text { font-size: 18px; color: #fff; margin-bottom: 30px; }
    .navigation { float: right; }
